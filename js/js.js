@@ -46,7 +46,7 @@ function next() {
 			$(".centrar").css("margin-top", ctotal / 2 * (-1));
 			/*$("<h1 class='text-center titulo blanco'><span id='back' class='fa fa-angle-left' onclick='back();'></span> " + data[recorrido]["FECHA"] + " <span id='next' class='fa fa-angle-right' onclick='next();'></span></h1><br>").prependTo(".centrar");*/
 			$("#fecha").html(data[recorrido]["FECHA"]);
-			$("#cantidad").html(data[recorrido]["Dominios Activos"]+"  dominios");
+			$("#cantidad").html(data[recorrido]["Dominios Activos"] + "  dominios");
 			setTimeout(function () {
 				$(".barra").css("height", data[recorrido]["Dominios Activos"] * 0.5 + "px");
 			}, 0);
@@ -61,7 +61,7 @@ function next() {
 			$(".centrar").css("margin-top", ctotal / 2 * (-1));
 			/*$("<h1 class='text-center titulo blanco'><span id='back' class='fa fa-angle-left' onclick='back();'></span> " + data[recorrido]["FECHA"] + " <span id='next' class='fa fa-angle-right' onclick='next();'></span></h1><br>").prependTo(".centrar");*/
 			$("#fecha").html(data[recorrido]["FECHA"]);
-			$("#cantidad").html(data[recorrido]["Dominios Activos"]+"  dominios");
+			$("#cantidad").html(data[recorrido]["Dominios Activos"] + "  dominios");
 			setTimeout(function () {
 				$(".barra").css("height", data[recorrido]["Dominios Activos"] * 1 + "px");
 			}, 0);
@@ -81,7 +81,7 @@ function back() {
 			$(".centrar").css("margin-top", ctotal / 2 * (-1));
 			/*$("<h1 class='text-center titulo blanco'><span id='back' class='fa fa-angle-left' onclick='back();'></span> " + data[recorrido]["FECHA"] + " <span id='next' class='fa fa-angle-right' onclick='next();'></span></h1><br>").prependTo(".centrar");*/
 			$("#fecha").html(data[recorrido]["FECHA"]);
-			$("#cantidad").html(data[recorrido]["Dominios Activos"]+"  dominios");
+			$("#cantidad").html(data[recorrido]["Dominios Activos"] + "  dominios");
 			setTimeout(function () {
 				$(".barra").css("height", data[recorrido]["Dominios Activos"] * 0.5 + "px");
 			}, 0);
@@ -96,7 +96,7 @@ function back() {
 			$(".centrar").css("margin-top", ctotal / 2 * (-1));
 			/*$("<h1 class='text-center titulo blanco'><span id='back' class='fa fa-angle-left' onclick='back();'></span> " + data[recorrido]["FECHA"] + " <span id='next' class='fa fa-angle-right' onclick='next();'></span></h1><br>").prependTo(".centrar");*/
 			$("#fecha").html(data[recorrido]["FECHA"]);
-			$("#cantidad").html(data[recorrido]["Dominios Activos"]+"  dominios");
+			$("#cantidad").html(data[recorrido]["Dominios Activos"] + "  dominios");
 			setTimeout(function () {
 				$(".barra").css("height", data[recorrido]["Dominios Activos"] * 1 + "px");
 			}, 0);
@@ -156,5 +156,61 @@ function closemenu() {
 	setTimeout(function () {
 		$(".centrar").css("opacity", "1");
 	}, 700);
+}
 
+function vanos() {
+	recorrido = 0;
+	document.getElementById("simbolomenu").setAttribute("onClick", "javascript: openmenu();");
+	setTimeout(function () {
+		$(".centrar2").css("opacity", "0");
+		$(".centrar").css("display", "block");
+	}, 0);
+	setTimeout(function () {
+		$("#menu").css('height', '0px');
+		$("footer").css("color", "#FFF");
+		$("footer a").css("color", "#FFF");
+		$("#butnmenu").html("menu");
+	}, 200);
+	setTimeout(function () {
+		$(".centrar").css("opacity", "1");
+	}, 700);
+	setTimeout(function () {
+		$("#tituloprincipal").css("opacity", "0");
+		$("#butnp").css("opacity", "0");
+		$(".centrar").html("");
+	}, 100);
+	setTimeout(function () {
+		$(".centrar").css("height", "15px");
+		$(".centrar").css("margin-top", "-7.5px");
+		$(".centrar").css("width", "0px");
+		$(".centrar").css("background-color", "#fff");
+		$(".centrar").css("margin-left", "-100px");
+		$("#tituloprincipal").css("display", "none");
+		$("#butnp").css("display", "none");
+	}, 1400);
+	setTimeout(function () {
+		$(".centrar").css("height", "15px");
+		$(".centrar").css("margin-top", "-7.5px");
+		$(".centrar").css("transition", "0.7s");
+		$(".centrar").css("width", "200px");
+	}, 1900);
+	setTimeout(function () {
+		$(".centrar").css("background-color", "transparent");
+	}, 2200);
+	setTimeout(function () {
+		$(".centrar").css("width", "700px");
+		$(".centrar").css("margin-left", "-350px");
+		$(".centrar").css("transition", "0s");
+	}, 2900);
+	setTimeout(function () {
+		resultados();
+	}, 3200);
+}
+
+function vtipos(){
+	
+}
+
+function vgeneral(){
+	
 }
