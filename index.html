@@ -9,16 +9,18 @@
 	<link rel="stylesheet" href="css/robyt2.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.1/nv.d3.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,200,300,500,600italic,700' rel='stylesheet' type='text/css'>
 	<script src="js/jquery-2.2.0.min.js"></script>
 	<script src="js/d3.js" charset="utf-8"></script>
+	<script src="js/nv.d3.js"></script>
 </head>
 
 <body>
 	<aside class="kolbig" id="menu">
 		<div class="kol-2 centerkol centrar2 titulo">
 			<h2 onclick="vanos();">Visualizar años</h2>
-			<h2>Visualizar general</h2>
+			<h2 onclick="vgeneral();">Visualizar general</h2>
 			<h2>Visualizar variaciones .es</h2>
 		</div>
 	</aside>
@@ -28,6 +30,7 @@
 			<b class="butn butn-classic texto" onclick="verbarras();">Comenzar</b>
 		</p>
 		<div class="loadbar"></div>
+		<svg class="titulo"></svg>
 	</div>
 
 	<footer class="kolbig">

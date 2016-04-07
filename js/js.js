@@ -207,10 +207,142 @@ function vanos() {
 	}, 3200);
 }
 
-function vtipos(){
-	
+function vtipos() {
+
 }
 
-function vgeneral(){
-	
+function vgeneral() {
+	document.getElementById("simbolomenu").setAttribute("onClick", "javascript: openmenu();");
+	setTimeout(function () {
+		$(".centrar2").css("opacity", "0");
+		$(".centrar").css("display", "block");
+	}, 0);
+	setTimeout(function () {
+		$("#menu").css('height', '0px');
+		$("footer").css("color", "#FFF");
+		$("footer a").css("color", "#FFF");
+		$("#butnmenu").html("menu");
+	}, 200);
+	setTimeout(function () {
+		$(".centrar").css("opacity", "1");
+	}, 700);
+	setTimeout(function () {
+		$("#tituloprincipal").css("opacity", "0");
+		$("#butnp").css("opacity", "0");
+		$(".centrar").html("<svg></svg>");
+	}, 100);
+	setTimeout(function () {
+		$(".centrar").css("height", "15px");
+		$(".centrar").css("margin-top", "-7.5px");
+		$(".centrar").css("width", "0px");
+		$(".centrar").css("background-color", "#fff");
+		$(".centrar").css("margin-left", "-425px");
+		$("#tituloprincipal").css("display", "none");
+		$("#butnp").css("display", "none");
+	}, 1400);
+	setTimeout(function () {
+		$(".centrar").css("height", "400px");
+		$(".centrar").css("margin-top", "-200px");
+		$(".centrar").css("transition", "0.7s");
+		$(".centrar").css("width", "850px");
+	}, 1900);
+	setTimeout(function () {
+		$(".centrar").css("background-color", "transparent");
+	}, 2200);
+	setTimeout(function () {
+		$(".centrar").css("width", "700px");
+		$(".centrar").css("margin-left", "-350px");
+		$(".centrar").css("transition", "0s");
+	}, 2900);
+	setTimeout(function () {
+		mostrargeneral();
+	}, 3200);
+}
+
+function dom() {
+	return [{
+		key: "Dominios.es",
+		values: [{
+			"label": "1997",
+			"value": 7219
+    }, {
+			"label": "1998",
+			"value": 12887
+    }, {
+			"label": "1999",
+			"value": 18859
+    }, {
+			"label": "2000",
+			"value": 29590
+    }, {
+			"label": "2001",
+			"value": 35570
+    }, {
+			"label": "2002",
+			"value": 43476
+    }, {
+			"label": "2003",
+			"value": 71158
+    }, {
+			"label": "2004",
+			"value": 85309
+    }, {
+			"label": "2005",
+			"value": 298600
+    }, {
+			"label": "2006",
+			"value": 507874
+    }, {
+			"label": "2007",
+			"value": 805327
+    }, {
+			"label": "2008",
+			"value": 1082757
+    }, {
+			"label": "2009",
+			"value": 1207832
+    }, {
+			"label": "2010",
+			"value": 1247978
+    }, {
+			"label": "2011",
+			"value": 1458371
+    }, {
+			"label": "2012",
+			"value": 1614149
+    }, {
+			"label": "2013",
+			"value": 1696538
+    }, {
+			"label": "2014",
+			"value": 1755224
+    }, {
+			"label": "2015",
+			"value": 1794866
+    }]
+  }]
+}
+
+function mostrargeneral() {
+	nv.addGraph(function () {
+		var chart = nv.models.discreteBarChart()
+			.x(function (d) {
+				return d.label
+			}) //Specify the data accessors.
+			.y(function (d) {
+				return d.value
+			})
+			.staggerLabels(false) // This automatically
+			.tooltips(false) //Don't show tooltips
+			.showValues(false) //...instead, show the bar value right on top of each bar.
+			.color(['#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF']);
+
+		d3.select('.centrar svg')
+			.datum(dom())
+			.call(chart);
+
+		nv.utils.windowResize(chart.update);
+
+		return chart;
+	});
 }
