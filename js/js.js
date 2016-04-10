@@ -28,6 +28,7 @@ function verbarras() {
 		$(".centrar").css("width", "700px");
 		$(".centrar").css("margin-left", "-350px");
 		$(".centrar").css("transition", "0s");
+		$(".centrar svg").css("display","none");
 	}, 2700);
 	setTimeout(function () {
 		resultados();
@@ -201,6 +202,7 @@ function vanos() {
 		$(".centrar").css("width", "700px");
 		$(".centrar").css("margin-left", "-350px");
 		$(".centrar").css("transition", "0s");
+		$(".centrar svg").css("display","none");
 	}, 2900);
 	setTimeout(function () {
 		resultados();
