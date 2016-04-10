@@ -207,10 +207,6 @@ function vanos() {
 	}, 3200);
 }
 
-function vtipos() {
-
-}
-
 function vgeneral() {
 	document.getElementById("simbolomenu").setAttribute("onClick", "javascript: openmenu();");
 	setTimeout(function () {
@@ -225,25 +221,19 @@ function vgeneral() {
 	}, 200);
 	setTimeout(function () {
 		$(".centrar").css("opacity", "1");
-	}, 700);
+	}, 100);
 	setTimeout(function () {
 		$("#tituloprincipal").css("opacity", "0");
 		$("#butnp").css("opacity", "0");
 		$(".centrar").html("<svg></svg>");
 	}, 100);
 	setTimeout(function () {
-		$(".centrar").css("height", "15px");
-		$(".centrar").css("margin-top", "-7.5px");
-		$(".centrar").css("width", "0px");
-		$(".centrar").css("background-color", "#fff");
-		$(".centrar").css("margin-left", "-425px");
 		$("#tituloprincipal").css("display", "none");
 		$("#butnp").css("display", "none");
 	}, 1400);
 	setTimeout(function () {
 		$(".centrar").css("height", "400px");
 		$(".centrar").css("margin-top", "-200px");
-		$(".centrar").css("transition", "0.7s");
 		$(".centrar").css("width", "850px");
 	}, 1900);
 	setTimeout(function () {
